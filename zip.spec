@@ -56,7 +56,7 @@ unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
 
 %build
 %{__make} -f unix/Makefile prefix=%{_prefix} \
-	CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -I. -DUNIX" generic_gcc
+	CFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -I. -DUNIX" generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
