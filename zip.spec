@@ -86,10 +86,10 @@ bir birleþimi gibidir ve PKZIP uyumludur.
 %patch1 -p1
 
 %build
-%{__make} -f unix/Makefile prefix=%{_prefix} \
+%{__make} -f unix/Makefile generic_gcc \
+	prefix=%{_prefix} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64" \
-	generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
