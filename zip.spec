@@ -1,14 +1,13 @@
-Summary: A file compression and packaging utility compatible with PKZIP.
-Name: zip
-Version: 2.1
-Release: 8
-Copyright: distributable
-Group: Applications/Archiving
-Source: ftp.uu.net:/pub/archiving/zip/zip21.zip
-Patch0: zip21.patch
-Patch1: zip-2.1-arm.patch
-Prefix: /usr
-BuildRoot: /var/tmp/zip-root
+Summary:	A file compression and packaging utility compatible with PKZIP.
+Name:		zip
+Version:	2.1
+Release:	9
+Copyright:	distributable
+Group:		Applications/Archiving
+Source:		ftp://ftp.uu.net/pub/archiving/zip/%{name}21.zip
+Patch0:		zip21.patch
+Patch1:		zip-2.1-arm.patch
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 The zip program is a compression and file packaging utility.  Zip is
@@ -26,30 +25,32 @@ unzip $RPM_SOURCE_DIR/zip21.zip
 %patch1 -p1
 
 %build
-make -f unix/Makefile prefix=/usr "RPM_OPT_FLAGS=$RPM_OPT_FLAGS" generic_gcc
+make -f unix/Makefile prefix=%{_prefix} \
+	CFLAGS="$RPM_OPT_FLAGS -I. -DUNIX" generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/{bin,man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-make -f unix/Makefile prefix=$RPM_BUILD_ROOT/usr install
+make -f unix/Makefile install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
-pushd $RPM_BUILD_ROOT
-for n in zipnote zipsplit zip zipcloak ; do
-    strip ./usr/bin/$n
-done
-popd
+strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/* || :
+
+gzip -9nf README Where algorith.doc zip.doc TODO infozip.who \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-%doc README Where algorith.doc install.doc zip.doc TODO infozip.who
-/usr/bin/zipgrep
-/usr/bin/zipnote
-/usr/bin/zipsplit
-/usr/bin/zip
-/usr/bin/zipcloak
-/usr/man/man1/zip.1
-/usr/man/man1/zipgrep.1
+%defattr(644,root,root,755)
+%doc {README,Where,algorith.doc,zip.doc,TODO,infozip.who}.gz
+%attr(755,root,root) %{_bindir}/zipgrep
+%attr(755,root,root) %{_bindir}/zipnote
+%attr(755,root,root) %{_bindir}/zipsplit
+%attr(755,root,root) %{_bindir}/zip
+%attr(755,root,root) %{_bindir}/zipcloak
+%{_mandir}/man1/zip.1*
+%{_mandir}/man1/zipgrep.1*
