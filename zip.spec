@@ -1,8 +1,8 @@
-Summary:	A file compression and packaging utility compatible with PKZIP.
-Summary(de): 	erstellt mit PKZIP(tm) kompatible .zip-Dateien
-Summary(pl):	Program do kompresji i archiwizacji plików, kompatybilny z PKZIP.
-Summary(fr): 	Crée des fichiers .zip compatibles avec PKZIP(tm).
-Summary(tr): 	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
+Summary:	A file compression and packaging utility compatible with PKZIP
+Summary(de):	erstellt mit PKZIP(tm) kompatible .zip-Dateien
+Summary(pl):	Program do kompresji i archiwizacji plików, kompatybilny z PKZIP
+Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
+Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.2
 Release:	3
@@ -17,19 +17,19 @@ BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The zip program is a compression and file packaging utility.  Zip is
+The zip program is a compression and file packaging utility. Zip is
 analogous to a combination of the UNIX tar and compress commands and is
-compatible with PKZIP (a compression and file packaging utility for
-MS-DOS systems).
+compatible with PKZIP (a compression and file packaging utility for MS-DOS
+systems).
 
 Install the zip package if you need to compress files using the zip
 program.
 
 %description -l de
-zip ist ein Komprimierungs- und Dateiarchivierungsprogramm für Unix,
-VMS, MSDOS, OS/2, Windows NT, Minix, Atari und Macintosh. Es
-entspricht einer Kombination der UNIX-Befehle tar(1) und compress(1)
-und ist mit PKZIP kompatibel (ZIP für MSDOS von Phil Katz).
+zip ist ein Komprimierungs- und Dateiarchivierungsprogramm für Unix, VMS,
+MSDOS, OS/2, Windows NT, Minix, Atari und Macintosh. Es entspricht einer
+Kombination der UNIX-Befehle tar(1) und compress(1) und ist mit PKZIP
+kompatibel (ZIP für MSDOS von Phil Katz).
 
 %description -l pl
 Program zip s³u¿y do kompresji oraz archiwizacji plików, o funkcjonalno¶ci
@@ -39,13 +39,13 @@ kompatybilny z programem PKZIP, popularnym archiwizatorem pod DOSa.
 %description -l fr
 zip est un utilitaire de compression et d'archivage de fichiers pour UNIX,
 MSDOS, OS/2, Windows NT, Minix, Atari et Macintosh. Il est analogue à une
-combinaison des commandes UNIX tar(1) et compress(1) et est compatible
-avec PKZIP (le \"Phil Katz's ZIP\" pour  MSDOS).
+combinaison des commandes UNIX tar(1) et compress(1) et est compatible avec
+PKZIP (le \"Phil Katz's ZIP\" pour MSDOS).
 
 %description -l tr
-zip çeþitli iþletim sistemleri için geliþtirilmiþ bir sýkýþtýrma yazýlýmýdýr.
-Çalýþmasý açýsýndan tar(1) ve compress(1) komutlarýnýn bir birleþimi gibidir
-ve PKZIP uyumludur.
+zip çeþitli iþletim sistemleri için geliþtirilmiþ bir sýkýþtýrma
+yazýlýmýdýr. Çalýþmasý açýsýndan tar(1) ve compress(1) komutlarýnýn bir
+birleþimi gibidir ve PKZIP uyumludur.
 
 %prep
 %setup  -q 
