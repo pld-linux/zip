@@ -5,11 +5,13 @@ Summary(fr): 	Crée des fichiers .zip compatibles avec PKZIP(tm).
 Summary(tr): 	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.2
-Release:	1
+Release:	2
 Copyright:	distributable
 Group:		Applications/Archiving
-Source:		ftp://ftp.uu.net/pub/archiving/zip/src/%{name}22.tar.gz
+Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}22.tar.gz
+Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Patch0:		zip21.patch
+Patch1:		zip22.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -45,7 +47,10 @@ ve PKZIP uyumludur.
 
 %prep
 %setup  -q 
+unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
+
 %patch0 -p1
+%patch1 -p0
 
 %build
 make -f unix/Makefile prefix=%{_prefix} \
