@@ -14,7 +14,7 @@ Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Patch0:		zip21.patch
 Patch1:		zip22.patch
 BuildPrereq:	unzip
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The zip program is a compression and file packaging utility.  Zip is
