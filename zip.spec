@@ -5,7 +5,7 @@ Summary(fr): 	Crée des fichiers .zip compatibles avec PKZIP(tm).
 Summary(tr): 	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.2
-Release:	2
+Release:	3
 Copyright:	distributable
 Group:		Utilities/Archiving
 Group(pl):	Narzêdzia/Archiwizacja
@@ -13,6 +13,7 @@ Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}22.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Patch0:		zip21.patch
 Patch1:		zip22.patch
+BuildPrereq:	unzip
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
