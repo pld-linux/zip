@@ -8,8 +8,6 @@ Version:	2.3
 Release:	10
 License:	distributable
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Source2:	zip-non-english-man-pages.tar.bz2
