@@ -16,6 +16,8 @@ Patch0:		%{name}-zmem.patch
 BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_unzipbin /usr/bin/unzip -o
+
 %description
 The zip program is a compression and file packaging utility. Zip is
 analogous to a combination of the UNIX tar and compress commands and
@@ -49,8 +51,8 @@ yazýlýmýdýr. Çalýþmasý açýsýndan tar(1) ve compress(1) komutlarýnýn
 bir birleþimi gibidir ve PKZIP uyumludur.
 
 %prep
-%setup  -q 
-unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
+%setup  -q -a0 -a1 < echo "A"
+#unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
 
 %patch0 -p1
 
