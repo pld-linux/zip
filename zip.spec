@@ -94,16 +94,13 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 bzip2 -dc %{SOURCE2} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf README WHERE proginfo/algorith.txt proginfo/3rdparty.bug \
-	TODO proginfo/infozip.who CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,WHERE,proginfo/algorith.txt,proginfo/3rdparty.bug}.gz
-%doc {TODO,proginfo/infozip.who,CHANGES}.gz
+%doc README WHERE proginfo/algorith.txt proginfo/3rdparty.bug
+%doc TODO proginfo/infozip.who CHANGES
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %lang(fi) %{_mandir}/fi/man1/*
