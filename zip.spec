@@ -89,7 +89,7 @@ bir birleþimi gibidir ve PKZIP uyumludur.
 %{__make} -f unix/Makefile generic_gcc \
 	prefix=%{_prefix} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64" \
+	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64"
 
 %install
 rm -rf $RPM_BUILD_ROOT
