@@ -5,13 +5,14 @@ Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.3
-Release:	8
+Release:	9
 License:	distributable
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
+Source2:	zip-non-english-man-pages.tar.bz2
 Patch0:		%{name}-zmem.patch
 BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -68,6 +69,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
+bzip2 -dc %{SOURCE2} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+
 gzip -9nf README WHERE proginfo/algorith.txt proginfo/3rdparty.bug \
 	TODO proginfo/infozip.who CHANGES
 
@@ -80,3 +83,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc {TODO,proginfo/infozip.who,CHANGES}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%lang(fi) %{_mandir}/fi/man1/*
+%lang(hu) %{_mandir}/hu/man1/*
