@@ -55,7 +55,7 @@ est compatible avec PKZIP (le \"Phil Katz's ZIP\" pour MSDOS).
 Program zip s³u¿y do kompresji oraz archiwizacji plików, o
 funkcjonalno¶ci analogicznej jak kombinacja unixowych programów tar i
 compress. Jest kompatybilny z programem PKZIP, popularnym
-archiwizatorem pod DOSa.
+archiwizatorem pod DOS-a.
 
 %description -l pt_BR
 zip é um utilitário de compressão e empacotamento de arquivo para
