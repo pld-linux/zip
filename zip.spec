@@ -9,7 +9,7 @@ Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarЩ yaratЩr
 Summary(uk):	Утил╕та для компресування та упаковки файл╕в, сум╕сна з PKZIP
 Name:		zip
 Version:	2.3
-Release:	17
+Release:	18
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
@@ -87,7 +87,9 @@ bir birleЧimi gibidir ve PKZIP uyumludur.
 
 %build
 %{__make} -f unix/Makefile prefix=%{_prefix} \
-	CC="%{__cc}" CFLAGS="%{rpmcflags} -I. -DUNIX" generic_gcc
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64" \
+	generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
