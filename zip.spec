@@ -9,13 +9,17 @@ Summary(tr):	PKZIP(tm)-uyumlu .zip dosyaları yaratır
 Summary(uk):	õÔÉÌ¦ÔÁ ÄÌÑ ËÏÍĞÒÅÓÕ×ÁÎÎÑ ÔÁ ÕĞÁËÏ×ËÉ ÆÁÊÌ¦×, ÓÕÍ¦ÓÎÁ Ú PKZIP
 Name:		zip
 Version:	2.3
-Release:	13
+Release:	16
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
+# Source0-md5:	5206a99541f3b0ab90f1baa167392c4f
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
-Source2:	%{name}-non-english-man-pages.tar.bz2
+# Source1-md5:	0c969ba1661183b041a142945ed2710e
+Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
+# Source2-md5:	72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
+Patch1:		%{name}-long-path-buffer-overflow.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,7 +56,7 @@ est compatible avec PKZIP (le \"Phil Katz's ZIP\" pour MSDOS).
 Program zip s³u¿y do kompresji oraz archiwizacji plików, o
 funkcjonalno¶ci analogicznej jak kombinacja unixowych programów tar i
 compress. Jest kompatybilny z programem PKZIP, popularnym
-archiwizatorem pod DOSa.
+archiwizatorem pod DOS-a.
 
 %description -l pt_BR
 zip é um utilitário de compressão e empacotamento de arquivo para
@@ -79,6 +83,7 @@ bir birleşimi gibidir ve PKZIP uyumludur.
 %prep
 %setup -q -a1
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} -f unix/Makefile prefix=%{_prefix} \
