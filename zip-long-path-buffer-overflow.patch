@@ -1,0 +1,16 @@
+--- zip-2.3/unix/unix.c.orig	1999-11-07 15:08:21.000000000 +0100
++++ zip-2.3/unix/unix.c	2004-11-08 18:05:15.056049488 +0100
+@@ -319,8 +319,11 @@
+    a file size of -1 */
+ {
+   struct stat s;        /* results of stat() */
+-  char name[FNMAX];
+-  int len = strlen(f);
++  size_t len = strlen(f);
++  char *name = malloc(len + 1);
++
++  if (name == NULL)
++    return 0;
+ 
+   if (f == label) {
+     if (a != NULL)
