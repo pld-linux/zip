@@ -9,7 +9,7 @@ Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarЩ yaratЩr
 Summary(uk):	Утил╕та для компресування та упаковки файл╕в, сум╕сна з PKZIP
 Name:		zip
 Version:	2.3
-Release:	13
+Release:	14
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
