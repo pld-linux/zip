@@ -57,7 +57,7 @@ bir birleþimi gibidir ve PKZIP uyumludur.
 
 %build
 %{__make} -f unix/Makefile prefix=%{_prefix} \
-	CFLAGS="%{rpmcflags} -I. -DUNIX" generic_gcc
+	CC="%{__cc}" CFLAGS="%{rpmcflags} -I. -DUNIX" generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
