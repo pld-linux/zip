@@ -5,12 +5,13 @@ Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.3
-Release:	7
-Copyright:	distributable
-Group:		Utilities/Archiving
-Group(pl):	Narzêdzia/Archiwizacja
+Release:	8
+License:	Distributable
+Group:		Applications/Archiving
+Group(de):	Applikationen/Archivierung
+Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
-Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
+Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 Patch0:		%{name}-zmem.patch
 BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,7 +56,7 @@ unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
 
 %build
 %{__make} -f unix/Makefile prefix=%{_prefix} \
-	CFLAGS="$RPM_OPT_FLAGS -I. -DUNIX" generic_gcc
+	CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -I. -DUNIX" generic_gcc
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -66,8 +67,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf README WHERE proginfo/algorith.txt proginfo/3rdparty.bug \
-	TODO proginfo/infozip.who CHANGES \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+	TODO proginfo/infozip.who CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
