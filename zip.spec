@@ -10,7 +10,7 @@ License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
-Source2:	zip-non-english-man-pages.tar.bz2
+Source2:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-zmem.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
