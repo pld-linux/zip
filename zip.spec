@@ -5,7 +5,7 @@ Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.3
-Release:	9
+Release:	10
 License:	distributable
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
