@@ -1,5 +1,6 @@
 Summary:	A file compression and packaging utility compatible with PKZIP.
 Summary(de): 	erstellt mit PKZIP(tm) kompatible .zip-Dateien
+Summary(pl):	Program do kompresji i archiwizacji plików, kompatybilny z PKZIP.
 Summary(fr): 	Crée des fichiers .zip compatibles avec PKZIP(tm).
 Summary(tr): 	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
@@ -25,6 +26,11 @@ zip ist ein Komprimierungs- und Dateiarchivierungsprogramm für Unix,
 VMS, MSDOS, OS/2, Windows NT, Minix, Atari und Macintosh. Es
 entspricht einer Kombination der UNIX-Befehle tar(1) und compress(1)
 und ist mit PKZIP kompatibel (ZIP für MSDOS von Phil Katz).
+
+%description -l pl
+Program zip s³u¿y do kompresji oraz archiwizacji plików, o funkcjonalno¶ci
+analogicznej jak kombinacja unixowych programów tar i compress. Jest
+kompatybilny z programem PKZIP, popularnym archiwizatorem pod DOSa.
 
 %description -l fr
 zip est un utilitaire de compression et d'archivage de fichiers pour UNIX,
