@@ -11,7 +11,7 @@ Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
-Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
+Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Patch0:		%{name}-zmem.patch
 BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
