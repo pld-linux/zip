@@ -14,10 +14,10 @@ Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Source2:	zip-non-english-man-pages.tar.bz2
 Patch0:		%{name}-zmem.patch
-BuildPrereq:	unzip
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_unzipbin /usr/bin/unzip -o
+%define		_unzipbin /usr/bin/unzip -o -q
 
 %description
 The zip program is a compression and file packaging utility. Zip is
@@ -52,9 +52,7 @@ yazýlýmýdýr. Çalýþmasý açýsýndan tar(1) ve compress(1) komutlarýnýn
 bir birleþimi gibidir ve PKZIP uyumludur.
 
 %prep
-%setup  -q -a0 -a1 < echo "A"
-#unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
-
+%setup -q -a1
 %patch0 -p1
 
 %build
