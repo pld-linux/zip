@@ -5,11 +5,11 @@ Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.3
-Release:	10
+Release:	11
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
-Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
+Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 Source2:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-zmem.patch
 BuildRequires:	unzip
