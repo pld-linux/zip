@@ -4,15 +4,14 @@ Summary(pl):	Program do kompresji i archiwizacji plików, kompatybilny z PKZIP
 Summary(fr):	Crée des fichiers .zip compatibles avec PKZIP(tm)
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
-Version:	2.2
-Release:	3
+Version:	2.3
+Release:	1
 Copyright:	distributable
 Group:		Utilities/Archiving
 Group(pl):	Narzêdzia/Archiwizacja
-Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}22.tar.gz
+Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
-Patch0:		zip21.patch
-Patch1:		zip22.patch
+Patch0:		zip-zmem.patch
 BuildPrereq:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,7 +51,6 @@ birleþimi gibidir ve PKZIP uyumludur.
 unzip -o $RPM_SOURCE_DIR/zcrypt28.zip
 
 %patch0 -p1
-%patch1 -p0
 
 %build
 make -f unix/Makefile prefix=%{_prefix} \
