@@ -8,18 +8,17 @@ Summary(ru):	Утилита для сжатия и упаковки файлов, совместимая с PKZIP
 Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarЩ yaratЩr
 Summary(uk):	Утил╕та для компресування та упаковки файл╕в, сум╕сна з PKZIP
 Name:		zip
-Version:	2.3
-Release:	18
+Version:	2.31
+Release:	1
 License:	distributable
 Group:		Applications/Archiving
-Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
-# Source0-md5:	5206a99541f3b0ab90f1baa167392c4f
+Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}231.tar.gz
+# Source0-md5:	6bfc076664416251d7624ab3538d1cb9
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 # Source1-md5:	0c969ba1661183b041a142945ed2710e
 Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source2-md5:	72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
-Patch1:		%{name}-long-path-buffer-overflow.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -83,7 +82,6 @@ bir birleЧimi gibidir ve PKZIP uyumludur.
 %prep
 %setup -q -a1
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__make} -f unix/Makefile generic_gcc \
@@ -97,7 +95,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 %{__make} -f unix/Makefile install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+	INSTALL=install
 
 bzip2 -dc %{SOURCE2} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
