@@ -6,7 +6,7 @@ Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarý yaratýr
 Name:		zip
 Version:	2.3
 Release:	8
-License:	Distributable
+License:	distributable
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
