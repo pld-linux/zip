@@ -13,8 +13,10 @@ Release:	13
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}23.tar.gz
+# Source0-md5: 5206a99541f3b0ab90f1baa167392c4f
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 Source2:	%{name}-non-english-man-pages.tar.bz2
+# Source2-md5: 72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
