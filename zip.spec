@@ -7,7 +7,8 @@ Name:		zip
 Version:	2.2
 Release:	2
 Copyright:	distributable
-Group:		Applications/Archiving
+Group:		Utilities/Archiving
+Group(pl):	Narzêdzia/Archiwizacja
 Source0:	ftp://ftp.uu.net/pub/archiving/zip/src/%{name}22.tar.gz
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt28.zip
 Patch0:		zip21.patch
@@ -63,8 +64,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 make -f unix/Makefile install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/* || :
 
 gzip -9nf README WHERE proginfo/algorith.txt proginfo/3rdparty.bug \
 	TODO proginfo/infozip.who CHANGES \
