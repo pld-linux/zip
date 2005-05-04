@@ -9,7 +9,7 @@ Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarЩ yaratЩr
 Summary(uk):	Утил╕та для компресування та упаковки файл╕в, сум╕сна з PKZIP
 Name:		zip
 Version:	2.31
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}231.tar.gz
