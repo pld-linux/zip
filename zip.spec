@@ -84,9 +84,10 @@ bir birleþimi gibidir ve PKZIP uyumludur.
 %patch0 -p1
 
 %build
-%{__make} -f unix/Makefile generic_gcc \
+%{__make} -f unix/Makefile generic \
 	prefix=%{_prefix} \
 	CC="%{__cc}" \
+	CPP="%{__cpp}" \
 	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64"
 
 %install
