@@ -19,6 +19,7 @@ Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source2-md5:	72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
+Patch1:		%{name}-multilib.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -82,6 +83,7 @@ bir birleþimi gibidir ve PKZIP uyumludur.
 %prep
 %setup -q -a1
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} -f unix/Makefile generic \
