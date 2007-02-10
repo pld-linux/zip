@@ -1,0 +1,11 @@
+--- zip-2.31/unix/configure.orig	2007-02-10 20:53:12.000000000 +0100
++++ zip-2.31/unix/configure	2007-02-10 20:53:30.000000000 +0100
+@@ -13,7 +13,7 @@
+ 
+ CC=${1-cc}
+ CFLAGS=${2-"-O2 -I. -DUNIX"}
+-LFLAGS1=""
++LFLAGS1="${CFLAGS}"
+ LN="ln -s"
+ 
+ echo Check for the C preprocessor
