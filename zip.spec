@@ -1,12 +1,12 @@
 Summary:	A file compression and packaging utility compatible with PKZIP
-Summary(de.UTF-8):   erstellt mit PKZIP(tm) kompatible .zip-Dateien
-Summary(es.UTF-8):   Crea archivos .zip compatibles con PKZIP(tm)
-Summary(fr.UTF-8):   Crée des fichiers .zip compatibles avec PKZIP(tm)
-Summary(pl.UTF-8):   Program do kompresji i archiwizacji plików, kompatybilny z PKZIP
-Summary(pt_BR.UTF-8):   Cria arquivos .zip compatíveis com PKZIP(tm)
-Summary(ru.UTF-8):   Утилита для сжатия и упаковки файлов, совместимая с PKZIP
-Summary(tr.UTF-8):   PKZIP(tm)-uyumlu .zip dosyaları yaratır
-Summary(uk.UTF-8):   Утиліта для компресування та упаковки файлів, сумісна з PKZIP
+Summary(de.UTF-8):	erstellt mit PKZIP(tm) kompatible .zip-Dateien
+Summary(es.UTF-8):	Crea archivos .zip compatibles con PKZIP(tm)
+Summary(fr.UTF-8):	Crée des fichiers .zip compatibles avec PKZIP(tm)
+Summary(pl.UTF-8):	Program do kompresji i archiwizacji plików, kompatybilny z PKZIP
+Summary(pt_BR.UTF-8):	Cria arquivos .zip compatíveis com PKZIP(tm)
+Summary(ru.UTF-8):	Утилита для сжатия и упаковки файлов, совместимая с PKZIP
+Summary(tr.UTF-8):	PKZIP(tm)-uyumlu .zip dosyaları yaratır
+Summary(uk.UTF-8):	Утиліта для компресування та упаковки файлів, сумісна з PKZIP
 Name:		zip
 Version:	2.31
 Release:	2
