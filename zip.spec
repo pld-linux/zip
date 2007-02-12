@@ -1,12 +1,12 @@
 Summary:	A file compression and packaging utility compatible with PKZIP
-Summary(de):	erstellt mit PKZIP(tm) kompatible .zip-Dateien
-Summary(es):	Crea archivos .zip compatibles con PKZIP(tm)
-Summary(fr):	CrИe des fichiers .zip compatibles avec PKZIP(tm)
-Summary(pl):	Program do kompresji i archiwizacji plikСw, kompatybilny z PKZIP
-Summary(pt_BR):	Cria arquivos .zip compatМveis com PKZIP(tm)
-Summary(ru):	Утилита для сжатия и упаковки файлов, совместимая с PKZIP
-Summary(tr):	PKZIP(tm)-uyumlu .zip dosyalarЩ yaratЩr
-Summary(uk):	Утил╕та для компресування та упаковки файл╕в, сум╕сна з PKZIP
+Summary(de.UTF-8):   erstellt mit PKZIP(tm) kompatible .zip-Dateien
+Summary(es.UTF-8):   Crea archivos .zip compatibles con PKZIP(tm)
+Summary(fr.UTF-8):   Crц╘e des fichiers .zip compatibles avec PKZIP(tm)
+Summary(pl.UTF-8):   Program do kompresji i archiwizacji plikцЁw, kompatybilny z PKZIP
+Summary(pt_BR.UTF-8):   Cria arquivos .zip compatц╜veis com PKZIP(tm)
+Summary(ru.UTF-8):   пёя┌п╦п╩п╦я┌п╟ п╢п╩я▐ я│п╤п╟я┌п╦я▐ п╦ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩п╬п╡, я│п╬п╡п╪п╣я│я┌п╦п╪п╟я▐ я│ PKZIP
+Summary(tr.UTF-8):   PKZIP(tm)-uyumlu .zip dosyalarд╠ yaratд╠r
+Summary(uk.UTF-8):   пёя┌п╦п╩я√я┌п╟ п╢п╩я▐ п╨п╬п╪п©я─п╣я│я┐п╡п╟п╫п╫я▐ я┌п╟ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩я√п╡, я│я┐п╪я√я│п╫п╟ п╥ PKZIP
 Name:		zip
 Version:	2.31
 Release:	2
@@ -34,51 +34,51 @@ MS-DOS systems).
 Install the zip package if you need to compress files using the zip
 program.
 
-%description -l de
-zip ist ein Komprimierungs- und Dateiarchivierungsprogramm fЭr Unix,
+%description -l de.UTF-8
+zip ist ein Komprimierungs- und Dateiarchivierungsprogramm fц╪r Unix,
 VMS, MSDOS, OS/2, Windows NT, Minix, Atari und Macintosh. Es
 entspricht einer Kombination der UNIX-Befehle tar(1) und compress(1)
-und ist mit PKZIP kompatibel (ZIP fЭr MSDOS von Phil Katz).
+und ist mit PKZIP kompatibel (ZIP fц╪r MSDOS von Phil Katz).
 
-%description -l es
-zip es un utilitario de compresiСn y empaquetado de archivo para Unix,
+%description -l es.UTF-8
+zip es un utilitario de compresiцЁn y empaquetado de archivo para Unix,
 VMS, MSDOS, OS/2, Windows NT, Minix, Atari y Machintosh. Y equivale al
 uso de programas UNIX como tar(1) y compress(1) combinados y es
 compatible con PKZIP (ZIP de Phil Katz para sistemas MSDOS).
 
-%description -l fr
+%description -l fr.UTF-8
 zip est un utilitaire de compression et d'archivage de fichiers pour
 UNIX, MSDOS, OS/2, Windows NT, Minix, Atari et Macintosh. Il est
-analogue Ю une combinaison des commandes UNIX tar(1) et compress(1) et
+analogue ц═ une combinaison des commandes UNIX tar(1) et compress(1) et
 est compatible avec PKZIP (le \"Phil Katz's ZIP\" pour MSDOS).
 
-%description -l pl
-Program zip sЁu©y do kompresji oraz archiwizacji plikСw, o
-funkcjonalno╤ci analogicznej jak kombinacja uniksowych programСw tar i
+%description -l pl.UTF-8
+Program zip sе┌uе╪y do kompresji oraz archiwizacji plikцЁw, o
+funkcjonalnoе⌡ci analogicznej jak kombinacja uniksowych programцЁw tar i
 compress. Jest kompatybilny z programem PKZIP, popularnym
 archiwizatorem pod DOS-a.
 
-%description -l pt_BR
-zip И um utilitАrio de compressЦo e empacotamento de arquivo para
-Unix, VMS, MSDOS, OS/2, Windows NT, Minix, Atari e Machintosh. Ele И
+%description -l pt_BR.UTF-8
+zip ц╘ um utilitц║rio de compressцёo e empacotamento de arquivo para
+Unix, VMS, MSDOS, OS/2, Windows NT, Minix, Atari e Machintosh. Ele ц╘
 equivalente ao uso de programas UNIX como tar(1) e compress(1)
-combinados e И compatМvel com o PKZIP (ZIP de Phil Katz para sistemas
+combinados e ц╘ compatц╜vel com o PKZIP (ZIP de Phil Katz para sistemas
 MSDOS).
 
-%description -l ru
-Программа zip - это утилита для компрессирования и упаковки файлов.
-Zip похож на комбинацию из команд Unix tar и compress и совместим с
-PKZIP (утилита для компрессирования и упаковки файлов для MS-DOS).
+%description -l ru.UTF-8
+п÷я─п╬пЁя─п╟п╪п╪п╟ zip - я█я┌п╬ я┐я┌п╦п╩п╦я┌п╟ п╢п╩я▐ п╨п╬п╪п©я─п╣я│я│п╦я─п╬п╡п╟п╫п╦я▐ п╦ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩п╬п╡.
+Zip п©п╬я┘п╬п╤ п╫п╟ п╨п╬п╪п╠п╦п╫п╟я├п╦я▌ п╦п╥ п╨п╬п╪п╟п╫п╢ Unix tar п╦ compress п╦ я│п╬п╡п╪п╣я│я┌п╦п╪ я│
+PKZIP (я┐я┌п╦п╩п╦я┌п╟ п╢п╩я▐ п╨п╬п╪п©я─п╣я│я│п╦я─п╬п╡п╟п╫п╦я▐ п╦ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩п╬п╡ п╢п╩я▐ MS-DOS).
 
-%description -l tr
-zip ГeЧitli iЧletim sistemleri iГin geliЧtirilmiЧ bir sЩkЩЧtЩrma
-yazЩlЩmЩdЩr. гalЩЧmasЩ aГЩsЩndan tar(1) ve compress(1) komutlarЩnЩn
-bir birleЧimi gibidir ve PKZIP uyumludur.
+%description -l tr.UTF-8
+zip ц╖eе÷itli iе÷letim sistemleri iц╖in geliе÷tirilmiе÷ bir sд╠kд╠е÷tд╠rma
+yazд╠lд╠mд╠dд╠r. ц┤alд╠е÷masд╠ aц╖д╠sд╠ndan tar(1) ve compress(1) komutlarд╠nд╠n
+bir birleе÷imi gibidir ve PKZIP uyumludur.
 
-%description -l uk
-Програма zip - це утил╕та для компресування та упаковки файл╕в. Zip
-схожий на комб╕нац╕ю з команд Unix tar та compress ╕ сум╕сний з PKZIP
-(утил╕та для компресування та упаковки файл╕в для MS-DOS).
+%description -l uk.UTF-8
+п÷я─п╬пЁя─п╟п╪п╟ zip - я├п╣ я┐я┌п╦п╩я√я┌п╟ п╢п╩я▐ п╨п╬п╪п©я─п╣я│я┐п╡п╟п╫п╫я▐ я┌п╟ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩я√п╡. Zip
+я│я┘п╬п╤п╦п╧ п╫п╟ п╨п╬п╪п╠я√п╫п╟я├я√я▌ п╥ п╨п╬п╪п╟п╫п╢ Unix tar я┌п╟ compress я√ я│я┐п╪я√я│п╫п╦п╧ п╥ PKZIP
+(я┐я┌п╦п╩я√я┌п╟ п╢п╩я▐ п╨п╬п╪п©я─п╣я│я┐п╡п╟п╫п╫я▐ я┌п╟ я┐п©п╟п╨п╬п╡п╨п╦ я└п╟п╧п╩я√п╡ п╢п╩я▐ MS-DOS).
 
 %prep
 %setup -q -a1
