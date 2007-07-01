@@ -3,7 +3,7 @@
 @@ -13,7 +13,7 @@
  
  CC=${1-cc}
- CFLAGS=${2-"-O2 -I. -DUNIX"}
+ CFLAGS=${2-"-I. -DUNIX"}
 -LFLAGS1=""
 +LFLAGS1="${CFLAGS}"
  LN="ln -s"
