@@ -91,7 +91,7 @@ bir birleşimi gibidir ve PKZIP uyumludur.
 	prefix=%{_prefix} \
 	CC="%{__cc}" \
 	CPP="%{__cpp}" \
-	CFLAGS="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64"
+	CFLAGS_NOOPT="%{rpmcflags} -I. -DUNIX -D_FILE_OFFSET_BITS=64"
 
 %install
 rm -rf $RPM_BUILD_ROOT
