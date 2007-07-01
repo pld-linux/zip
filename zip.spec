@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Утилита для сжатия и упаковки фай
 Summary(tr.UTF-8):	PKZIP(tm)-uyumlu .zip dosyaları yaratır
 Summary(uk.UTF-8):	Утиліта для компресування та упаковки файлів, сумісна з PKZIP
 Name:		zip
-Version:	2.31
-Release:	3
+Version:	2.32
+Release:	1
 License:	distributable
 Group:		Applications/Archiving
-Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}231.tar.gz
-# Source0-md5:	6bfc076664416251d7624ab3538d1cb9
+Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}%(echo %{version} | tr -d .).tgz
+# Source0-md5:	8a4da4460386e324debe97f3b7fe4d96
 Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
 # Source1-md5:	0c969ba1661183b041a142945ed2710e
 Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
@@ -23,7 +23,8 @@ Patch1:		%{name}-multilib.patch
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_unzipbin /usr/bin/unzip -o -q
+%define		__unzip    	/usr/bin/unzip -o -q
+%define		_unzipbin	/usr/bin/unzip -o -q
 
 %description
 The zip program is a compression and file packaging utility. Zip is
