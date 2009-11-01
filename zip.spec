@@ -8,23 +8,19 @@ Summary(ru.UTF-8):	Утилита для сжатия и упаковки фай
 Summary(tr.UTF-8):	PKZIP(tm)-uyumlu .zip dosyaları yaratır
 Summary(uk.UTF-8):	Утиліта для компресування та упаковки файлів, сумісна з PKZIP
 Name:		zip
-Version:	2.32
+Version:	3.0
 Release:	1
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}%(echo %{version} | tr -d .).tgz
-# Source0-md5:	8a4da4460386e324debe97f3b7fe4d96
-Source1:	ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip
-# Source1-md5:	0c969ba1661183b041a142945ed2710e
+# Source0-md5:	7b74551e63f8ee6aab6fbc86676c0d37
 Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source2-md5:	72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
 Patch1:		%{name}-multilib.patch
+BuildRequires:	bzip2-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		__unzip    	/usr/bin/unzip -o -q
-%define		_unzipbin	/usr/bin/unzip -o -q
 
 %description
 The zip program is a compression and file packaging utility. Zip is
@@ -82,7 +78,7 @@ bir birleşimi gibidir ve PKZIP uyumludur.
 (утиліта для компресування та упаковки файлів для MS-DOS).
 
 %prep
-%setup -q -a1
+%setup -q -n %{name}30
 %patch0 -p1
 %patch1 -p1
 
@@ -109,8 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README WHERE proginfo/*.txt proginfo/3rdparty.bug
-%doc TODO proginfo/infozip.who CHANGES
+%doc BUGS CHANGES LICENSE README* TODO USexport.msg WHERE WHATSNEW file_id.diz *.ann *.txt proginfo
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %lang(fi) %{_mandir}/fi/man1/*
