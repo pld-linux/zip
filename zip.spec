@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	PKZIP(tm)-uyumlu .zip dosyaları yaratır
 Summary(uk.UTF-8):	Утиліта для компресування та упаковки файлів, сумісна з PKZIP
 Name:		zip
 Version:	3.0
-Release:	1
+Release:	2
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://ftp.info-zip.org/pub/infozip/src/%{name}%(echo %{version} | tr -d .).tgz
@@ -18,6 +18,7 @@ Source2:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source2-md5:	72d619b4f70c06c34e5244125b62fdce
 Patch0:		%{name}-zmem.patch
 Patch1:		%{name}-multilib.patch
+Patch2:		format-security.patch
 BuildRequires:	bzip2-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -81,6 +82,7 @@ bir birleşimi gibidir ve PKZIP uyumludur.
 %setup -q -n %{name}30
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} -f unix/Makefile generic \
